@@ -1,0 +1,87 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.app-container {
+  background-color: white;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form-tugas {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-tugas input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-tugas button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-tugas button:hover {
+  background-color: #0056b3;
+}
+
+.daftar-tugas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.daftar-tugas li {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+  word-break: break-all;
+}
+
+.daftar-tugas li:last-child {
+  border-bottom: none;
+}
+
+.tombol-hapus {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.2s;
+}
+
+.tombol-hapus:hover {
+  background-color: #c82333;
+}
