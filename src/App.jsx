@@ -5,10 +5,10 @@ import './App.css'
 
 function App() {
   //state for control input field and save task list
-  const [tugas,setTugas] = useState([
-    {id : 1, teks : 'belajar react'}
+  const [tugas, setTugas] = useState([
+    { id: 1, teks: 'belajar react' }
   ])
-  const [input,setInput] = useState('')
+  const [input, setInput] = useState('')
 
   //function for adding task
   function handleAddTask(event) {
@@ -16,7 +16,7 @@ function App() {
     event.preventDefault();
 
     //checking the input field
-    if (input .trim === '') {
+    if (input.trim === '') {
       return;
     }
 
@@ -46,8 +46,8 @@ function App() {
       <h1>My Task</h1>
 
       <form className='form-tugas' onSubmit={handleAddTask}>
-        <input 
-          type="text" 
+        <input
+          type="text"
           value={input}
           onChange={e => setInput(e.target.value)}
         />
@@ -55,14 +55,18 @@ function App() {
       </form>
 
       <ul className='daftar-tugas'>
-        {tugas.map(taskItem => (
-          <li key={taskItem.id}>
-            <span>{taskItem.teks}</span>
-            <button className='tombol-hapus' onClick={() => handleDeleteTask(taskItem.id)}>
-              Hapus
-            </button>
-          </li>
-        ))}
+        {tugas.length === 0 ? (
+          <p className='pesan-kosong'>Hore tugasmu telah selesai!!!</p>
+        ) : (
+          tugas.map(taskItem => (
+            <li key={taskItem.id}>
+              <span>{taskItem.teks}</span>
+              <button className='tombol-hapus' onClick={() => handleDeleteTask(taskItem.id)}>
+                Hapus
+              </button>
+            </li>
+          ))
+        )}
       </ul>
     </div>
   )

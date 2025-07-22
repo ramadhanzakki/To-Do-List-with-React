@@ -84,3 +84,9 @@ h1 {
 .tombol-hapus:hover {
   background-color: #c82333;
 }
+
+.pesan-kosong {
+  color: black;
+  display: flex;
+  justify-content: center;
+}
